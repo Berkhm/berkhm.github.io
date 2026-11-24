@@ -34,7 +34,7 @@
       <div class="hero-text">
         <p class="overline">Computer Engineering · Gazi University, Ankara</p>
         <h1>Berk Hökmen</h1>
-        <p class="lede">I train segmentation networks on CT scans and test where they break. I also write backend services in Java.</p>
+        <p class="lede">I'm a computer engineering student doing research on AI for medical imaging.</p>
         <p class="actions">
           <a class="btn btn-primary" href="mailto:berkhokmen@gmail.com">Email me</a>
           <a class="btn" href="https://github.com/Berkhm" target="_blank" rel="noopener">GitHub</a>
@@ -42,18 +42,31 @@
         </p>
       </div>
       <figure class="hero-figure" aria-hidden="true">
-        <svg viewBox="-130 -130 260 260">
-          <g class="contours">
-            <path id="blob" d="M0,-95 C55,-98 98,-50 92,5 C86,60 45,98 -8,94 C-62,90 -100,48 -96,-6 C-92,-58 -52,-92 0,-95 Z"/>
-            <use href="#blob" transform="rotate(14) scale(.8)"/>
-            <use href="#blob" transform="rotate(28) scale(.6)"/>
-            <use href="#blob" transform="rotate(42) scale(.4)"/>
+        <!-- U-Net: encoder (left), bottleneck (bottom), decoder (right), skip connections (dashed) -->
+        <svg viewBox="0 0 340 210">
+          <defs>
+            <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+              <path d="M0,0 L10,5 L0,10 z"/>
+            </marker>
+          </defs>
+          <g class="skip">
+            <path d="M68,25 H270"/><path d="M68,75 H270"/><path d="M68,125 H270"/>
           </g>
-          <path class="lesion" d="M18,-22 C34,-26 44,-12 40,2 C36,16 22,20 12,12 C2,4 2,-18 18,-22 Z"/>
-          <path class="bbox" d="M-112,-92 v-20 h20 M92,-112 h20 v20 M112,92 v20 h-20 M-92,112 h-20 v-20"/>
-          <path class="cross" d="M26,-5 h8 M30,-9 v8"/>
+          <g class="flow">
+            <path d="M40,40 V58"/><path d="M40,90 V108"/>
+            <path d="M68,136 L140,178"/><path d="M200,178 L272,136"/>
+            <path d="M300,110 V92"/><path d="M300,60 V42"/>
+          </g>
+          <g class="block">
+            <rect x="12" y="10" width="56" height="30" rx="4"/>
+            <rect x="12" y="60" width="56" height="30" rx="4"/>
+            <rect x="12" y="110" width="56" height="30" rx="4"/>
+            <rect x="272" y="10" width="56" height="30" rx="4"/>
+            <rect x="272" y="60" width="56" height="30" rx="4"/>
+            <rect x="272" y="110" width="56" height="30" rx="4"/>
+          </g>
+          <rect class="bottleneck" x="142" y="168" width="56" height="30" rx="4"/>
         </svg>
-        <figcaption>fig. 1 · contour map</figcaption>
       </figure>
     </section>
 

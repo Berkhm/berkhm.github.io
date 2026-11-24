@@ -63,8 +63,8 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outlin
 .nav-toggle { display: none; }
 
 /* Hero */
-.hero { display: grid; grid-template-columns: 1fr 17rem; gap: 3rem; align-items: center; padding: 5.5rem 0 4.5rem; border-bottom: 1px solid var(--border); }
-.overline, .date, .section-label span, .badge, .stack, .awards span, figcaption, .contact-list span {
+.hero { display: grid; grid-template-columns: 1fr 20rem; gap: 3rem; align-items: center; padding: 5.5rem 0 4.5rem; border-bottom: 1px solid var(--border); }
+.overline, .date, .section-label span, .badge, .stack, .awards span, .contact-list span {
   font-family: var(--mono); font-size: 0.75rem; font-weight: 500; letter-spacing: 0.04em;
 }
 .overline { color: var(--accent); text-transform: uppercase; margin: 0 0 1rem; }
@@ -84,14 +84,11 @@ h1 { font-size: clamp(3rem, 8vw, 4.75rem); letter-spacing: -0.02em; line-height:
 
 .hero-figure { margin: 0; text-align: center; }
 .hero-figure svg { width: 100%; height: auto; overflow: visible; }
-.contours path, .contours use { fill: none; stroke: var(--primary); stroke-width: 1.2; vector-effect: non-scaling-stroke; }
-.contours use:nth-child(2) { opacity: 0.7; }
-.contours use:nth-child(3) { opacity: 0.5; }
-.contours use:nth-child(4) { opacity: 0.35; }
-.lesion { fill: var(--accent-soft); stroke: var(--accent); stroke-width: 1.5; }
-.bbox { fill: none; stroke: var(--muted); stroke-width: 1; opacity: 0.6; }
-.cross { stroke: var(--accent); stroke-width: 1.2; }
-figcaption { color: var(--muted); margin-top: 0.75rem; }
+.block rect { fill: var(--surface); stroke: var(--primary); stroke-width: 1.5; }
+.bottleneck { fill: var(--accent-soft); stroke: var(--accent); stroke-width: 1.5; }
+.flow path { fill: none; stroke: var(--primary); stroke-width: 1.5; marker-end: url(#arrow); }
+.skip path { fill: none; stroke: var(--muted); stroke-width: 1.2; stroke-dasharray: 6 5; marker-end: url(#arrow); }
+#arrow path { fill: var(--muted); }
 
 /* Sections: label in the margin, content beside it */
 .section { display: grid; grid-template-columns: 13rem 1fr; gap: 2rem; padding: 3.5rem 0; border-bottom: 1px solid var(--border); }
@@ -172,7 +169,7 @@ h3 { font-size: 1.3rem; }
 
 @media (max-width: 640px) {
   .hero { grid-template-columns: 1fr; gap: 2rem; padding: 3.5rem 0 3rem; }
-  .hero-figure { max-width: 12rem; order: -1; }
+  .hero-figure { max-width: 18rem; order: -1; }
   .projects { grid-template-columns: 1fr; }
   .pub { padding: 1.25rem; }
 }
